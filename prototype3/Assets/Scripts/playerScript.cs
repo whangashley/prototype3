@@ -7,6 +7,7 @@ public class playerScript : MonoBehaviour
 
     public float speed;
 
+    public Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,8 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerAnimator.SetFloat("speed", speed);
+
         if (Input.GetKey(KeyCode.W)) {
                 if (transform.position.y < 3f) {
                     //then player 1 will move up
@@ -45,5 +48,7 @@ public class playerScript : MonoBehaviour
     //move function
     void Move(Vector3 direction) {
         transform.position += direction * speed;
+        playerAnimator.SetFloat("speed", speed);
+        // Debug.Log("moved");
     }
 }
