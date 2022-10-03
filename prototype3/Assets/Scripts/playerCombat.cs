@@ -15,6 +15,8 @@ public class playerCombat : MonoBehaviour
 
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
+    public Rigidbody2D playerRB;
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +29,8 @@ public class playerCombat : MonoBehaviour
     }
 
     void Attack() {
+        playerRB.velocity = Vector2.zero;
+        
         //play atk anim
         playerAnimator.SetTrigger("attack");
 
