@@ -123,6 +123,158 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2185055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2185057}
+  - component: {fileID: 2185059}
+  - component: {fileID: 2185058}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2185057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.6911392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2185058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebd92695d42407b980385567e12b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: playerAttack
+    clip: {fileID: 8300000, guid: 4e47f45625ea94f3eba65a0676f7a5d4, type: 3}
+    volume: 0.7
+    loop: 0
+    source: {fileID: 0}
+  - name: bg
+    clip: {fileID: 8300000, guid: f00d65752bdd2443ba563fd7842e1718, type: 3}
+    volume: 0.01
+    loop: 1
+    source: {fileID: 0}
+--- !u!82 &2185059
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185055}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7525701
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +307,7 @@ Transform:
   - {fileID: 1719355862}
   - {fileID: 1596787575}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46263589
 GameObject:
@@ -234,6 +386,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 46263591}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 46263590}
   accelTime: 0
@@ -335,7 +489,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &69836977
 GameObject:
@@ -352,6 +506,7 @@ GameObject:
   - component: {fileID: 69836982}
   - component: {fileID: 69836983}
   - component: {fileID: 69836984}
+  - component: {fileID: 69836985}
   m_Layer: 0
   m_Name: obj_player
   m_TagString: Player
@@ -439,7 +594,7 @@ Transform:
   m_Children:
   - {fileID: 1173895137}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &69836981
 Animator:
@@ -482,7 +637,7 @@ MonoBehaviour:
   attackDamage: 30
   attackRate: 2
   playerRB: {fileID: 69836984}
-  isInteracting: 0
+  objEnemy: {fileID: 575756117}
 --- !u!61 &69836983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -530,6 +685,102 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &69836985
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69836977}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &194469427
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +992,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 251112073}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 251112072}
   accelTime: 0
@@ -842,7 +1095,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323791147
 GameObject:
@@ -953,7 +1206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &473389280
 GameObject:
@@ -1469,6 +1722,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 575756119}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 575756118}
   accelTime: 0
@@ -1570,7 +1825,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593228405
 GameObject:
@@ -1649,6 +1904,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 593228408}
+  killCount: 0
+  isDead: 0
   isRunning: 0
   rb: {fileID: 593228407}
   accelTime: 0
@@ -1750,7 +2007,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &600580455
 GameObject:
@@ -1861,7 +2118,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &633577017
 GameObject:
@@ -1957,7 +2214,7 @@ RectTransform:
   m_Children:
   - {fileID: 660537163}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2228,7 +2485,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!1 &1084468468
 GameObject:
@@ -2307,6 +2564,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1084468470}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 1084468469}
   accelTime: 0
@@ -2408,7 +2667,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173895136
 GameObject:
@@ -2662,7 +2921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1307485253
 BoxCollider2D:
@@ -2705,6 +2964,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1307485255}
+  killCount: 0
+  isDead: 0
   isRunning: 0
   rb: {fileID: 1307485256}
   accelTime: 0
@@ -2972,7 +3233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386911546
 GameObject:
@@ -3051,6 +3312,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1386911548}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 1386911547}
   accelTime: 0
@@ -3152,7 +3415,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408133122
 GameObject:
@@ -3231,6 +3494,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1408133124}
+  killCount: 0
+  isDead: 0
   isRunning: 1
   rb: {fileID: 1408133123}
   accelTime: 0
@@ -3332,7 +3597,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457170389
 GameObject:
@@ -3598,7 +3863,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1707471335
 MonoBehaviour:
@@ -3702,7 +3967,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1596787574}
+  visual: {fileID: 2080200048}
+  objEnemy: {fileID: 1307485250}
+  readOnce: 0
+  objDialogueManager: {fileID: 2072721796}
   inkJSON: {fileID: 4900000, guid: c7dbc3ff3298641179291cfe9c8bbcac, type: 3}
+  angelAppear: 0
+  vizCueActivate: 0
 --- !u!1 &1728908225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +4186,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1738984214}
+  killCount: 0
+  isDead: 0
   isRunning: 0
   rb: {fileID: 1738984213}
   accelTime: 0
@@ -4016,7 +4289,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1856488321
 GameObject:
@@ -4095,6 +4368,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyAnimator: {fileID: 1856488323}
+  killCount: 0
+  isDead: 0
   isRunning: 0
   rb: {fileID: 1856488322}
   accelTime: 0
@@ -4196,7 +4471,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980884941
 GameObject:
@@ -4281,7 +4556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1980884944
 BoxCollider2D:
@@ -4494,6 +4769,7 @@ MonoBehaviour:
   - {fileID: 1457170389}
   - {fileID: 1340502270}
   - {fileID: 194469427}
+  readOnce: 0
 --- !u!1 &2080200048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,5 +4885,5 @@ Transform:
   - {fileID: 473389281}
   - {fileID: 2072721797}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -35,6 +35,7 @@ public class playerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime) {
             if (Input.GetMouseButton(0)) {
+                FindObjectOfType<audioManager>().Play("playerAttack");
                 Attack();
                 // isInteracting = true; 
                 nextAttackTime = Time.time + 1f / attackRate;

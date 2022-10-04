@@ -84,7 +84,6 @@ public class enemyScript : MonoBehaviour
 
         //play hurt anim
         enemyAnimator.SetTrigger("Hurt");
-
         if (currentHealth <= 0) {
             enemyAnimator.SetBool("IsDead", true);
             Die();
@@ -104,6 +103,7 @@ public class enemyScript : MonoBehaviour
 
     private IEnumerator countDownCo(Rigidbody2D rb) {
         yield return new WaitForSeconds(countDownTime);
+        FindObjectOfType<audioManager>().Play("enemyDie");
         rb.isKinematic = true;
         rb.velocity = Vector2.zero;
         isRunning = false;
