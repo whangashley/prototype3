@@ -17,12 +17,26 @@ public class playerCombat : MonoBehaviour
     float nextAttackTime = 0f;
 
     public Rigidbody2D playerRB;
+
+    // public bool isInteracting;
+
+    enemyScript enemyScriptNormal;
+    public GameObject objEnemy;
+
+    void Start()
+    {
+        // isInteracting = false;
+        enemyScriptNormal = objEnemy.GetComponent<enemyScript>();
+
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Time.time >= nextAttackTime) {
             if (Input.GetMouseButton(0)) {
                 Attack();
+                // isInteracting = true; 
                 nextAttackTime = Time.time + 1f / attackRate;
             }            
         }

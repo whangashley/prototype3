@@ -8,16 +8,22 @@ public class playerScript : MonoBehaviour
     public float speed;
 
     public Animator playerAnimator;
+
+    // public bool isInteracting;
     // Start is called before the first frame update
     void Start()
     {
-        
+        // isInteracting = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         playerAnimator.SetFloat("speed", speed);
+
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return;
+        }
 
         if (Input.GetKey(KeyCode.W)) {
                 if (transform.position.y < 3f) {
@@ -43,6 +49,14 @@ public class playerScript : MonoBehaviour
                     Move(Vector3.left);
                     }
                 }
+        
+        // if (Input.GetKey(KeyCode.I)) {
+        //     isInteracting = true;
+        //     Debug.Log("pressed I");
+        // }
+        // else {
+        //     isInteracting = false;
+        // }
     }
 
     //move function

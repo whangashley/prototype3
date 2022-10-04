@@ -831,6 +831,22 @@
                     "isOR": false
                 }
             ]
+        },
+        {
+            "name": "Control Scheme P3",
+            "bindingGroup": "Control Scheme P3",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
