@@ -81,6 +81,7 @@ public class enemyScript : MonoBehaviour
 
     public void TakeDamage(int damage) {
         currentHealth -= damage;
+        rb.velocity = Vector2.zero;
 
         //play hurt anim
         enemyAnimator.SetTrigger("Hurt");
@@ -103,7 +104,6 @@ public class enemyScript : MonoBehaviour
 
     private IEnumerator countDownCo(Rigidbody2D rb) {
         yield return new WaitForSeconds(countDownTime);
-        FindObjectOfType<audioManager>().Play("enemyDie");
         rb.isKinematic = true;
         rb.velocity = Vector2.zero;
         isRunning = false;
